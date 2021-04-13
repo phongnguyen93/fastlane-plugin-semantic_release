@@ -22,7 +22,7 @@ module Fastlane
             "description": params[:description],
             "milestones": [],
             "name": params[:title],
-            "ref": git_branch,
+            "ref": params[:branch_name],
             "tag_name": params[:tag]
           }.to_json
           res = http.request(req)
@@ -77,6 +77,11 @@ module Fastlane
             key: :tag,
             description: "Release tag",
             optional: true
+          ),
+          FastlaneCore::ConfigItem.new(
+            key: :branch_name,
+            description: "Git branch name",
+            optional: false
           )
         ]
       end
