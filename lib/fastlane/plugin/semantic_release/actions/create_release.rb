@@ -85,6 +85,7 @@ module Fastlane
           FastlaneCore::ConfigItem.new(
             key: :assets,
             description: "Release assets",
+            type:Hash,
             optional: true
           )
         ]
