@@ -6,7 +6,7 @@ require 'fastlane/plugin/semantic_release/version'
 
 Gem::Specification.new do |spec|
   spec.name          = 'fastlane-plugin-semantic_release_workflow'
-  spec.version       = Fastlane::SemanticRelease::VERSION
+  spec.version       = Fastlane::SemanticReleaseWorkflow::VERSION
   spec.author        = 'Phong Nguyen'
   spec.email         = 'phongnguyen180993@gmail.com'
 
