@@ -16,7 +16,6 @@ module Fastlane
           req = Net::HTTP::Post.new(uri)
           req['Content-Type'] = 'application/json'
           req['PRIVATE-TOKEN'] = params[:private_token]
-          puts(git_branch)
           req.body = {
             "assets": {},
             "description": params[:description],
