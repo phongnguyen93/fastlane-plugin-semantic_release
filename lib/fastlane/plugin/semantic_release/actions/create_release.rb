@@ -17,7 +17,7 @@ module Fastlane
           req['Content-Type'] = 'application/json'
           req['PRIVATE-TOKEN'] = params[:private_token]
           req.body = {
-            "assets": {},
+            "assets": params[:assets],
             "description": params[:description],
             "milestones": [],
             "name": params[:title],
@@ -81,6 +81,11 @@ module Fastlane
             key: :branch_name,
             description: "Git branch name",
             optional: false
+          ),
+          FastlaneCore::ConfigItem.new(
+            key: :assets,
+            description: "Release assets",
+            optional: true
           )
         ]
       end
