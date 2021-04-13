@@ -1,1 +1,1 @@
-module Fastlane module SemanticReleaseWorkflow VERSION = "1.0.2" end end
+module Fastlane module SemanticReleaseWorkflow VERSION = "1.0.3" end end
