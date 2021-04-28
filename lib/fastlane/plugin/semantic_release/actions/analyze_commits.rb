@@ -35,7 +35,7 @@ module Fastlane
       def self.get_commits_from_hash(params)
         commits = Helper::SemanticReleaseHelper.git_log(
           pretty: '%s|%b|>',
-          start: params[:hash],
+          start: params[:hash].rstrip!,
           debug: params[:debug]
         )
         commits.split("|>")
@@ -313,7 +313,7 @@ module Fastlane
           ['RELEASE_IS_NEXT_VERSION_HIGHER', 'True if next version is higher then last version'],
           ['RELEASE_IS_NEXT_VERSION_COMPATIBLE_WITH_CODEPUSH', 'True if next version is compatible with codepush'],
           ['RELEASE_LAST_TAG_HASH', 'Hash of commit that is tagged as a last version'],
-          ['RELEASE_LAST_VERSION', 'Last version number - parsed from last tag.'],
+          ['RELEASE_LiAST_VERSION', 'Last version number - parsed from last tag.'],
           ['RELEASE_NEXT_MAJOR_VERSION', 'Major number of the next version'],
           ['RELEASE_NEXT_MINOR_VERSION', 'Minor number of the next version'],
           ['RELEASE_NEXT_PATCH_VERSION', 'Patch number of the next version'],

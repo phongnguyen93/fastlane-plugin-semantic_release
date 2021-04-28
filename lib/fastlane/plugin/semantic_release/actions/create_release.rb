@@ -84,7 +84,7 @@ module Fastlane
           ),
           FastlaneCore::ConfigItem.new(
             key: :assets,
-            description: "Release assets",
+            description: "Release assets (apk link download,...)",
             type:Hash,
             optional: true
           )
